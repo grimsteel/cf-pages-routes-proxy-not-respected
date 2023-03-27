@@ -1,0 +1,25 @@
+{
+  "name": "cf-pages-routes-proxy-not-respected",
+  "description": "Demonstration for cloudflare/workers-sdk#2950",
+  "version": "1.0.0",
+  "main": "public/index.html",
+  "devDependencies": {
+    "http-server": "^14.1.1",
+    "wrangler": "^2.13.0"
+  },  
+  "scripts": {
+    "dev": "wrangler pages dev --port 8788 --proxy 8080 --compatibility-date=2023-03-26 -- npm run serve-public",
+    "dev:no-proxy": "wrangler pages dev --port 8788 --compatibility-date=2023-03-26 public",
+    "serve-public": "http-server public -p 8080"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/grimsteel/cf-pages-routes-proxy-not-respected.git"
+  },
+  "author": "grimsteel",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/grimsteel/cf-pages-routes-proxy-not-respected/issues"
+  },
+  "homepage": "https://github.com/grimsteel/cf-pages-routes-proxy-not-respected#readme"
+}
